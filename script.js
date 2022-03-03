@@ -2,18 +2,21 @@ const app = function() {
 
     class Game {
         
-        order = []
-        clickedOrder = []
-        score = 0
-        elements = {
-            0: document.querySelector('.green'),
-            1: document.querySelector('.red'),
-            2:  document.querySelector('.yellow'),
-            3: document.querySelector('.blue')
+        init() {
+            this.order = []
+            this.clickedOrder = []
+            this.score = 0
+            this.elements = {
+                0: document.querySelector('.green'),
+                1: document.querySelector('.red'),
+                2:  document.querySelector('.yellow'),
+                3: document.querySelector('.blue')
+            }
         }
         
         // Inicializa Tudo 
         run() {
+            this.init()
             this.addColorEvents()
             this.playGame()
         }
